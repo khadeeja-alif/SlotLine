@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<linker>
+  <assembly fullname="DryIoc">
+    <type fullname="*" />
+  </assembly>
+  <assembly fullname="Prism">
+    <type fullname="*" />
+  </assembly>
+  <assembly fullname="Prism.DryIoc.Forms">
+    <type fullname="*" />
+  </assembly>
+  <assembly fullname="SlotLineTest">
+    <type fullname="*" />
+  </assembly>
+  <assembly fullname="Prism.Forms">
+    <type fullname="*" />
+  </assembly> 
+    </linker>
