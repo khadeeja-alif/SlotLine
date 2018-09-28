@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using DataSlotLine;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
@@ -10,6 +11,7 @@ namespace SlotLineTest.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+        public List<Class1> MyData { get; set; }
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
