@@ -5,6 +5,9 @@ using SlotLineTest.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Prism.DryIoc;
+using Prism.Modularity;
+using System;
+using SlotLineTest.UserManagement;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SlotLineTest
@@ -31,6 +34,16 @@ namespace SlotLineTest
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+        }
+
+        protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+        {
+            Type userModule = typeof(UserModule);
+            moduleCatalog.AddModule(new ModuleInfo(userModule)
+            {
+                ModuleName = userModule.Name,
+                InitializationMode = InitializationMode.WhenAvailable
+            });
         }
     }
 }
