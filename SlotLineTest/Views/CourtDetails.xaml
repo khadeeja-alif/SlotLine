@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.CourtDetails"
+             xmlns:local="clr-namespace:SlotLineTest"
+             Title="Court Details"
+             BackgroundColor="#fefefe">
+      <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TitleStyle" TargetType="Label">
+                <Setter Property="FontSize">
+                    <Setter.Value>
+                           <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="14"/> 
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="MaterialEntryStyle" TargetType="local:MaterialEntry">
+                <Setter Property="AccentColor" Value="#F0916E"/>
+            </Style>
+            <Style x:Key="ErrorTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="FontSize" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Margin="10" Spacing="10">
+            <StackLayout>
+                <local:MaterialEntry x:Name="courtName" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="Court Name"
+                                       Text="{Binding CourtName.Value}">
+                                </local:MaterialEntry>
+                 <Label IsVisible="False" x:Name="courtvalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=CourtName.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                </StackLayout>
+             <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                 <Label Text="Sports Available" TextColor="#323232" Style="{StaticResource TitleStyle}"/>
+                      <Label Text="Manage" HorizontalOptions="EndAndExpand" TextColor="#F0916E" Style="{StaticResource TitleStyle}"/>
+                </StackLayout>
+                  <!-- HORIZONTAL LISTVIEW TEMPLATE -->
+                        <StackLayout HorizontalOptions="Start">
+                            <Image Source="ic_launcher.png" HeightRequest="30" WidthRequest="30"/>
+                            <Label Text="Football" TextColor="#8D8D8D">
+                                 <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize>   
+            </Label>
+                        </StackLayout>
+                      <Label Text="Timings" TextColor="#323232" Margin="0,10,0,0" Style="{StaticResource TitleStyle}"/>
+                <Grid ColumnSpacing="20">
+                       <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TimePicker Grid.Column="0"/>
+                    <TimePicker Grid.Column="1"/>
+                </Grid>
+                <BoxView HeightRequest="1" Margin="0,10" BackgroundColor="#e1e1e1"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="8*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="icon.png" Aspect="AspectFit" HeightRequest="25" WidthRequest="25" HorizontalOptions="CenterAndExpand"/>
+                <Label Grid.Column="1" Text="Pricing &amp; Timing" TextColor="#323232" VerticalTextAlignment="Center">
+                         <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="14"/>
+                </Label.FontSize>   
+            </Label>
+                <StackLayout Grid.Row="1" Grid.Column="1">
+                <local:MaterialEntry x:Name="basePrice" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="Base Price / Hour"
+                                       Text="{Binding BasePrice.Value}">
+                                </local:MaterialEntry>
+                 <Label IsVisible="False" x:Name="pricevalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=BasePrice.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                </StackLayout>
+            </Grid>
+                          <BoxView HeightRequest="1" Margin="0,10" BackgroundColor="#e1e1e1"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                   <ColumnDefinition Width="6*"/>
+                     <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="icon.png" Aspect="AspectFit" HeightRequest="25" WidthRequest="25" HorizontalOptions="CenterAndExpand"/>
+                <Label Grid.Column="1" Text="Combine Courts" TextColor="#323232" VerticalTextAlignment="Center">
+                         <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="14"/>
+                </Label.FontSize>   
+            </Label>
+                <Switch x:Name="combineSwitch" Grid.Column="2"/>
+                <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,10,0" Spacing="10">
+                <!--Change Label Text on Switch On-->
+                <Label Text="By enabling this you can combine multiple small courts to form a big virtual court."
+                        TextColor="#bebebe">
+                         <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize>
+                 <!--   <Label.Triggers>
+                        <DataTrigger Binding="{x:Reference combineSwitch, Path=IsToggled}" TargetType="Label"
+                                     Value="True">
+                            <Setter Property="Text" Value="Now you can combine multiple small courts to form a big virtual court."/>
+                        </DataTrigger>
+                    </Label.Triggers>-->
+            </Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="COURTS" TextColor="#BEBEBE">
+                            <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize>
+                            </Label>
+                    <Label Text="Manage" HorizontalOptions="EndAndExpand" TextColor="#323232">
+                                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize>
+                            </Label>
+                </StackLayout>
+                    <Frame IsVisible="true" BackgroundColor="#f9f9f9" Padding="10" CornerRadius="5" HasShadow="false">
+                      <Label Text="Select courts to combine" HorizontalTextAlignment="Center" TextColor="#bebebe">
+                                     <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize>
+                            </Label>
+                    </Frame>
+                    <ListView IsVisible="false" x:Name="courts" VerticalOptions="StartAndExpand" RowHeight="50" ItemsSource="{Binding CombinedCourts}" SeparatorVisibility="None" HasUnevenRows="false">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame Margin="0,0,0,10" BackgroundColor="#f1f1f1" Padding="10" CornerRadius="5" HasShadow="false">
+                                        <Label Text="{Binding CourtName}" TextColor="#323232">
+                                             <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize>
+                                            </Label>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    </StackLayout>
+            </Grid>
+                    <BoxView HeightRequest="1" Margin="0,10" BackgroundColor="#e1e1e1"/>  
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                   <ColumnDefinition Width="8*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="icon.png" Aspect="AspectFit" HeightRequest="25" WidthRequest="25" HorizontalOptions="CenterAndExpand"/>
+                <Label Grid.Column="1" Text="Delete Court" TextColor="#323232" VerticalTextAlignment="Center">
+                         <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="14"/>
+                </Label.FontSize>   
+            </Label>
+            </Grid>
+        </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

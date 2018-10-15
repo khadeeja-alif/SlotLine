@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.ListBlockedSlots"
+             xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
+             BackgroundColor="#FEFEFE">
+    <ContentPage.Content>
+        <sync:SfListView x:Name="blockedList" ItemsSource="{Binding BlockedSlotList}" AutoFitMode="Height" SelectionBackgroundColor="Transparent">
+             <sync:SfListView.DataSource>
+      <data:DataSource>
+        <data:DataSource.GroupDescriptors>
+          <data:GroupDescriptor PropertyName="Date"/>
+        </data:DataSource.GroupDescriptors>
+      </data:DataSource>
+    </sync:SfListView.DataSource>
+      <sync:SfListView.GroupHeaderTemplate>
+                    <DataTemplate x:Name="GroupHeaderTemplate"  x:Key="GroupHeaderTemplate">
+                        <ViewCell>
+                            <ViewCell.View>
+                                    <Label Text="{Binding Date}" TextColor="#F0916E" FontSize="14"/>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+      </sync:SfListView.GroupHeaderTemplate>
+            <sync:SfListView.ItemTemplate>
+                <DataTemplate>
+        <Frame BackgroundColor="#F8F8F8" Margin="10,5" HasShadow="false" Padding="10" CornerRadius="10" VerticalOptions="Start">
+          <Grid RowSpacing="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+          <Label Grid.Row="0" Grid.Column="0" Text="{Binding CourtName}" LineBreakMode="TailTruncation" TextColor="#323232" FontSize="16"/>
+          <Label Grid.Row="1" Grid.Column="0" Text="{Binding BlockedByOn}" LineBreakMode="TailTruncation" TextColor="#BEBEBE" FontSize="14"/>
+          <Label Grid.Row="0" Grid.Column="1" Text="{Binding BlockedHours}" TextColor="#323232" HorizontalTextAlignment="End" FontSize="16"/>
+          <Label Grid.Row="1" Grid.Column="1" Text="{Binding SlotNo}" TextColor="#BEBEBE" HorizontalTextAlignment="End" FontSize="14"/>
+                </Grid>
+        </Frame>
+                     </DataTemplate>
+            </sync:SfListView.ItemTemplate>
+        </sync:SfListView>
+    </ContentPage.Content>
+</ContentPage>

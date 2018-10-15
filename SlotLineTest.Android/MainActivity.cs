@@ -1,8 +1,10 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Com.Syncfusion.Charts;
 using Prism;
 using Prism.Ioc;
+using Syncfusion.ListView.XForms;
 
 namespace SlotLineTest.Droid
 {
@@ -17,7 +19,17 @@ namespace SlotLineTest.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App(new AndroidInitializer()));
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer:true);
+            //LoadApplication(new App(new AndroidInitializer()));
+            LoadApplication(UXDivers.Gorilla.Droid.Player.CreateApplication(
+    this,
+    new UXDivers.Gorilla.Config("Good Gorilla")
+                   .RegisterAssemblyFromType<CustomPicker>()
+                .RegisterAssemblyFromType<MaterialEntry>()
+                  .RegisterAssemblyFromType<SfListView>()
+                 .RegisterAssemblyFromType<SfChart>()
+                .RegisterAssembly(typeof(SlotLineTest.App).Assembly)
+    ));
         }
     }
 

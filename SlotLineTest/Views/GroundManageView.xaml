@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.GroundManageView">
+    <ContentPage.Content>
+         <StackLayout>
+            <Grid Margin="0,10">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ViewBookings}" NumberOfTapsRequired="1"/>
+                </Grid.GestureRecognizers>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <Image  Grid.Column="0" Source="icon.png" HeightRequest="20" WidthRequest="20" Aspect="AspectFit" HorizontalOptions="CenterAndExpand"/>
+        <Label Grid.Column="1" Text="View Bookings" VerticalTextAlignment="Center" TextColor="#323232" FontSize="16"/>
+       </Grid>
+                <BoxView Grid.ColumnSpan="2" BackgroundColor="#E1E1E1" HeightRequest="1"/>
+              <Grid Margin="0,10">
+                 <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ManageCourts}" NumberOfTapsRequired="1"/>
+                </Grid.GestureRecognizers>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <Image  Grid.Column="0" Source="icon.png" HeightRequest="20" WidthRequest="20" Aspect="AspectFit" HorizontalOptions="CenterAndExpand"/>
+        <Label Grid.Column="1" Text="Manage Courts" VerticalTextAlignment="Center" TextColor="#323232" FontSize="16"/>
+        </Grid>
+                <BoxView Grid.ColumnSpan="2" BackgroundColor="#E1E1E1" HeightRequest="1"/>
+             <Grid Margin="0,10">
+                 <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ManageSports}" NumberOfTapsRequired="1"/>
+                </Grid.GestureRecognizers>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <Image  Grid.Column="0" Source="icon.png" HeightRequest="20" WidthRequest="20" Aspect="AspectFit" HorizontalOptions="CenterAndExpand"/>
+        <Label Grid.Column="1" Text="Manage Sports" VerticalTextAlignment="Center" TextColor="#323232" FontSize="16"/>
+        </Grid>
+                <BoxView Grid.ColumnSpan="2" BackgroundColor="#E1E1E1" HeightRequest="1"/>
+             <Grid Margin="0,10">
+                 <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToBlockSlots}" NumberOfTapsRequired="1"/>
+                </Grid.GestureRecognizers>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <Image  Grid.Column="0" Source="icon.png" HeightRequest="20" WidthRequest="20" Aspect="AspectFit" HorizontalOptions="CenterAndExpand"/>
+        <Label Grid.Column="1" Text="Block &amp; Unblock Slots" VerticalTextAlignment="Center" TextColor="#323232" FontSize="16"/>
+        </Grid>
+                <BoxView Grid.ColumnSpan="2" BackgroundColor="#E1E1E1" HeightRequest="1"/>
+              <Grid Margin="0,10">
+                 <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding DeleteGround}" NumberOfTapsRequired="1"/>
+                </Grid.GestureRecognizers>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <Image  Grid.Column="0" Source="icon.png" HeightRequest="20" WidthRequest="20" Aspect="AspectFit" HorizontalOptions="CenterAndExpand"/>
+        <Label Grid.Column="1" Text="Delete Ground" VerticalTextAlignment="Center" TextColor="#323232" FontSize="16"/>
+        </Grid>
+                <BoxView Grid.ColumnSpan="2" BackgroundColor="#E1E1E1" HeightRequest="1"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+             

@@ -1,6 +1,10 @@
 ﻿using Foundation;
+using PanCardView.iOS;
 using Prism;
 using Prism.Ioc;
+using Syncfusion.ListView.XForms;
+using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.SfChart.XForms;
 using UIKit;
 
 
@@ -22,8 +26,19 @@ namespace SlotLineTest.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App(new iOSInitializer()));
-
+            CardsViewRenderer.Preserve();
+            SfListViewRenderer.Init();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            Syncfusion.SfChart.XForms.iOS.Renderers.SfChartRenderer.Init();
+            //LoadApplication(new App(new iOSInitializer()));
+            LoadApplication(UXDivers.Gorilla.iOS.Player.CreateApplication(
+  new UXDivers.Gorilla.Config("Good Gorilla")
+                .RegisterAssemblyFromType<CustomPicker>()
+                .RegisterAssemblyFromType<MaterialEntry>()
+                   .RegisterAssemblyFromType<SfListView>()
+                .RegisterAssemblyFromType<SfChart>()
+                .RegisterAssembly(typeof(SlotLineTest.App).Assembly)
+    ));
             return base.FinishedLaunching(app, options);
         }
     }

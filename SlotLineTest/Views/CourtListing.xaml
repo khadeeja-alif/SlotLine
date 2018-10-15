@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SlotLineTest.Views.CourtListing"
+             BackgroundColor="#fefefe">
+    <ContentPage.Content>
+        <Grid>
+            <ListView x:Name="courtList" ItemsSource="{Binding CourtList}" SeparatorVisibility="None" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="#f8f8f8" CornerRadius="10" Margin="10" Padding="10" HasShadow="false" VerticalOptions="Start">
+                                <StackLayout Spacing="2">
+                                    <Label Text="{Binding CourtName}" TextColor="#323232">
+                                          <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="14"/>
+                </Label.FontSize>   
+                                    </Label>
+                    <Label Text="{Binding CourtType}" TextColor="#bebebe">
+                        <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="15" Android="13"/>
+                </Label.FontSize>   
+                                    </Label>
+                      <StackLayout Margin="0,10,0,0" HorizontalOptions="Start">
+                            <Image Source="{Binding GamePic}" HeightRequest="30" WidthRequest="30"/>
+                            <Label Text="{Binding GameName}" TextColor="#707070">
+                                 <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize>   
+            </Label>
+                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <StackLayout/>
+                </ListView.Footer>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

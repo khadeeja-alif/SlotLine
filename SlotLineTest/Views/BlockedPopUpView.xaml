@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.BlockedPopUpView">
+    <ContentView.Content>
+        <Grid>
+         <Grid BackgroundColor="#303030" RowSpacing="0" Padding="10" VerticalOptions="EndAndExpand" Margin="10">
+           <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5.5*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="0" VerticalOptions="CenterAndExpand" Spacing="2">
+            <Label Text="2.5 Hours in Total" FontSize="14" TextColor="White"/> 
+            <Label Text="2 Slots Chosen" FontSize="12" TextColor="White"/>
+            </StackLayout>
+                <Label Grid.Column="1" Text="BLOCK SLOTS" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontSize="13" TextColor="White"/>
+            <Image Grid.Column="2" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" 
+                   Source="icon.png" Aspect="AspectFit" HeightRequest="25" WidthRequest="25"/>
+        </Grid>
+         <Grid IsVisible="false" BackgroundColor="#BEBEBE" RowSpacing="0" Padding="12" VerticalOptions="EndAndExpand" Margin="10">
+                <Label  Text="Select All Available Slots" FontSize="14" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White"/>
+        </Grid>
+            </Grid>
+    </ContentView.Content>
+</ContentView>

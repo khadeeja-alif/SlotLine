@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.CartView"
+             xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable">
+    <ContentPage.Content>
+        <StackLayout Margin="10" Spacing="10">
+            <Grid ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="1"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Frame Grid.Column="0" Padding="0" CornerRadius="10" HasShadow="false">
+                    <Image Source="icon.png" Aspect="AspectFit"/>
+                </Frame>
+                <StackLayout Grid.Column="1" Spacing="2" VerticalOptions="CenterAndExpand">
+                    <Label Text="Club Decathlon" LineBreakMode="WordWrap" TextColor="#323232">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="14"/>
+                        </Label.FontSize>
+                        </Label>
+                    <Label Text="KT Gopalan Rd, Eranhippalam, Kozhikode" LineBreakMode="TailTruncation" TextColor="#323232">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                        </Label.FontSize>
+                        </Label>
+                </StackLayout>
+                <BoxView Grid.Column="2" BackgroundColor="#e9e9e9"/>
+                <StackLayout Grid.Column="3" VerticalOptions="CenterAndExpand" Spacing="4">
+                    <Image Source="icon.png" Aspect="AspectFit" HeightRequest="25" WidthRequest="25" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Football" TextColor="#8c8c8c" HorizontalTextAlignment="Center">
+                          <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                        </Label.FontSize>
+                    </Label>
+                </StackLayout>
+            </Grid>
+            <BoxView HeightRequest="1" BackgroundColor="#e9e9e9"/>
+            <sync:SfListView x:Name="slotList" ItemSpacing="5" ItemsSource="{Binding CartList}" AutoFitMode="Height" SelectionBackgroundColor="Transparent">
+             <!--   <sync:SfListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                       <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="9*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="1" Text="{Binding SlotDate}" TextColor="#F0916E">
+                                 <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                        </Label.FontSize>
+                                </Label>
+                            </Grid>
+                    </DataTemplate>
+                </sync:SfListView.GroupHeaderTemplate>-->
+                <sync:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="9*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="icon.png" Aspect="AspectFit" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Frame Grid.Column="1" BackgroundColor="#f5f5f5" HasShadow="false" Padding="10,15" CornerRadius="15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0" VerticalOptions="CenterAndExpand">
+                            <Label Text="{Binding GroundName}" TextColor="#323232">
+                                    <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                        </Label.FontSize>
+                            </Label>
+                             <Label Text="{Binding SlotTime}" TextColor="#323232">
+                                    <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                        </Label.FontSize>
+                            </Label>
+                        </StackLayout>
+                        <Label Grid.Column="1" Text="{Binding Amount}" HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="#323232">
+                                    <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                        </Label.FontSize>
+                            </Label>
+                    </Grid>
+                </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </sync:SfListView.ItemTemplate>
+            </sync:SfListView>
+            <BoxView HeightRequest="1" BackgroundColor="#e9e9e9"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="To be Paid by Client" FontAttributes="Bold" TextColor="#ADADAD">
+                     <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="18"/>
+                        </Label.FontSize>
+                </Label>
+                <Label Grid.Column="1" Text="$ 7,500.00" FontAttributes="Bold" TextColor="#5E35B1">
+                     <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="18"/>
+                        </Label.FontSize>
+                </Label>
+            </Grid>
+            <Button Text="CONFIRM BOOKING" TextColor="White" BackgroundColor="#32BEA6" VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

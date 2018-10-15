@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.SportList">
+    <ContentPage.Content>
+        <ListView x:Name="gameList" ItemsSource="{Binding GameList}" SeparatorColor="#e9e9e9" HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+        <Grid RowSpacing="2" Padding="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.RowSpan="2" Source="{Binding GamePic}" HeightRequest="50" WidthRequest="50" Aspect="AspectFit"/>
+            <Label Grid.Column="1" Grid.Row="0" Text="{Binding GameName}" TextColor="#323232">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="14"/>
+                </Label.FontSize>   
+            </Label>
+            <Label Grid.Column="1" Grid.Row="1" Text="{Binding GameHours}" LineBreakMode="TailTruncation" TextColor="#323232">
+                 <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="15" Android="13"/>
+                </Label.FontSize>   
+            </Label>
+        </Grid>
+                         </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout/>
+            </ListView.Footer>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

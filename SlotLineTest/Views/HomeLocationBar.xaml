@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.HomeLocationBar"
+             xmlns:local="clr-namespace:SlotLineTest">
+    <ContentView.Content>
+        <Frame VerticalOptions="Start" CornerRadius="0" Padding="15">
+        <Grid Padding="0,10,0,0" RowSpacing="2" ColumnSpacing="50">
+                <Grid.Padding>
+                         <OnPlatform x:TypeArguments="Thickness" iOS="0,10,0,0" Android="0"/>
+                </Grid.Padding>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+                <local:CustomPicker Grid.Row="0" Grid.Column="0" Arrow="arrow.png" TextColor="#323232"
+                                         SelectedItem="{Binding GroundSelected}"
+                                         ItemsSource="{Binding GroundList}">
+                    <local:CustomPicker.FontSize>
+                                 <OnPlatform x:TypeArguments="x:Double" iOS="17" Android="16"/>
+                    </local:CustomPicker.FontSize>
+                    </local:CustomPicker>
+                <!--<Label Grid.Row="0" Grid.Column="0" Text="Club Decathlon" TextColor="#323232">
+                      <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="17" Android="16"/>
+                </Label.FontSize>   
+            </Label>-->
+                 <Label Grid.Row="1" Grid.Column="0" Text="KT Gopalan Rd, Eranhippalam, K..." TextColor="#707070" LineBreakMode="TailTruncation">
+                      <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="15" Android="14"/>
+                </Label.FontSize>   
+            </Label>
+                 <local:CustomPicker Grid.Row="0" Grid.Column="1" Arrow="arrow.png" TextColor="#323232"
+                                         SelectedItem="{Binding DateSelected}"
+                                         ItemsSource="{Binding DateList}">
+                    <local:CustomPicker.FontSize>
+                                 <OnPlatform x:TypeArguments="x:Double" iOS="17" Android="16"/>
+                    </local:CustomPicker.FontSize>
+                    </local:CustomPicker>
+                  <!-- <Label Grid.Row="0" Grid.Column="1" Text="Mon 12" TextColor="#323232" HorizontalOptions="EndAndExpand">
+                      <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="17" Android="16"/>
+                </Label.FontSize>   
+            </Label>-->
+                 <Label Grid.Row="1" Grid.Column="1" Text="December 2018" TextColor="#707070" LineBreakMode="TailTruncation" HorizontalTextAlignment="End">
+                      <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="15" Android="14"/>
+                </Label.FontSize>   
+            </Label>
+        </Grid>
+            </Frame>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SlotLineTest.Views.PassView">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="gradient.png" Aspect="AspectFill"/>
+            <ScrollView>
+            <Grid Padding="0,30,0,0" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="icon.png" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" HorizontalOptions="CenterAndExpand"/>
+                <Label Grid.Row="1" Text="{Binding StatusText}" FontSize="16" TextColor="White" HorizontalTextAlignment="Center"/>
+                <Frame Grid.Row="2" Margin="20,0" Padding="0" BackgroundColor="White" CornerRadius="10" HasShadow="false">
+                <Grid Padding="0,10" RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" Padding="20,0" ColumnSpacing="15" RowSpacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="1"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="1"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="8*"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame Grid.Column="0" Grid.Row="0" Padding="0" CornerRadius="5" HasShadow="false" BackgroundColor="Yellow" IsClippedToBounds="true">
+                                <Image Source="icon.png" Aspect="AspectFill"/>
+                            </Frame>
+                              <StackLayout Grid.Column="1" Grid.Row="0" Spacing="5" VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding CustomerName}" LineBreakMode="TailTruncation" TextColor="#323232" FontSize="14"/>
+                                <Label Text="{Binding CustomerPhone}" TextColor="#323232" FontSize="13"/>
+                                <Label Text="Tap to make call" TextColor="#9A9A9A" FontSize="12"/>
+                            </StackLayout>
+                            <BoxView Grid.Row="1" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="#E2E2E2"/>
+                             <StackLayout Grid.Column="0" Grid.Row="2" Spacing="0">
+                                <Label Text="{Binding Day}" TextColor="#5E35B1" FontSize="12" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding Date}" TextColor="#5E35B1" FontSize="20" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding MonthYear}" TextColor="#5E35B1" FontSize="12" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                              <StackLayout Grid.Column="1" Grid.Row="2" Spacing="5" VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding GroundName}" LineBreakMode="TailTruncation" TextColor="#323232" FontSize="14"/>
+                                <Label Text="{Binding GameNCourt}" TextColor="#323232" FontSize="13"/>
+                                <Label Text="{Binding SlotNTime}" TextColor="#9A9A9A" FontSize="12"/>
+                            </StackLayout>
+                            <BoxView Grid.Row="3" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="#E2E2E2"/>
+                        <Label Grid.Row="4" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                              <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                 FontSize="16"
+                 Text="Booking ID:"
+                 TextColor="#9A9A9A" />
+                                            <Span Text="   "/>
+                                                <Span
+                 FontSize="16"
+                 Text="{Binding BookingID}"
+                 TextColor="#5E35B1" />
+                                        </FormattedString> 
+                                    </Label.FormattedText>      
+                                </Label>
+                            </Grid>
+                            <Grid Grid.Row="2" RowSpacing="10" VerticalOptions="CenterAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="6*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                </Grid.ColumnDefinitions>
+                                <BoxView Grid.Row="1" Grid.RowSpan="8" Grid.ColumnSpan="2" BackgroundColor="#F1F1F1"/>
+                                <Label Grid.Row="0" Margin="20,0,0,0" Grid.Column="0" Text="Booking Type" TextColor="#323232" FontSize="14"/>
+                                <Label Grid.Row="0" Margin="0,0,20,0" Grid.Column="1" Text="{Binding BookingType}" TextColor="#323232" HorizontalTextAlignment="End" FontSize="14"/>
+                                <Label Grid.Row="2" Margin="20,0,0,0" Grid.Column="0" Text="{Binding GroundCharge,StringFormat='Ground Charge @{0}/hr'}" TextColor="#323232" FontSize="14"/>
+                                <Label Grid.Row="2" Margin="0,0,20,0" Grid.Column="1" Text="{Binding BasePrice}" TextColor="#323232" HorizontalTextAlignment="End" FontSize="14"/>
+                                <Label Grid.Row="3" Margin="20,0,0,0" Grid.Column="0" Text="Convenience Fees" TextColor="#323232" FontSize="14"/>
+                                <Label Grid.Row="3" Margin="0,0,20,0" Grid.Column="1" Text="{Binding CFees}" TextColor="#323232" HorizontalTextAlignment="End" FontSize="14"/>
+                                <Label Grid.Row="4" Margin="20,0,0,0" Grid.Column="0" Text="Discount" TextColor="#323232" FontSize="14"/>
+                                <Label Grid.Row="4" Margin="0,0,20,0" Grid.Column="1" Text="{Binding Discount}" TextColor="#323232" HorizontalTextAlignment="End" FontSize="14"/>
+                                <Label Grid.Row="5" Margin="20,0,0,0" Grid.Column="0" Text="{Binding PromoCode,StringFormat='Promocode [{0}]'}" TextColor="#323232" FontSize="14"/>
+                                <Label Grid.Row="5" Margin="0,0,20,0" Grid.Column="1" Text="{Binding PromoPrice}" TextColor="#323232" HorizontalTextAlignment="End" FontSize="14"/>
+                                <Label Grid.Row="6" Margin="20,0,0,0" Grid.Column="0" Text="{Binding CGSTPercent,StringFormat='CGST [{0}%]'}" TextColor="#323232" FontSize="14"/>
+                                <Label Grid.Row="6" Margin="0,0,20,0" Grid.Column="1" Text="{Binding CGSTPrice}" TextColor="#323232" HorizontalTextAlignment="End" FontSize="14"/>
+                                <Label Grid.Row="7" Margin="20,0,0,0" Grid.Column="0" Text="{Binding SGSTPercent,StringFormat='SGST [{0}%]'}" TextColor="#323232" FontSize="14"/>
+                                <Label Grid.Row="7" Margin="0,0,20,0" Grid.Column="1" Text="{Binding SGSTPrice}" TextColor="#323232" HorizontalTextAlignment="End" FontSize="14"/>
+                                <Label Grid.Row="9" Margin="20,0,0,0" Grid.Column="0" Text="Sub Total" TextColor="#9A9A9A" FontSize="16" />
+                                <Label Grid.Row="9" Margin="0,0,20,0" Grid.Column="1" Text="{Binding SubTotalPrice}" TextColor="#5E35B1" FontSize="16" HorizontalTextAlignment="End" />
+                            </Grid>
+                    </Grid>
+            </Frame>
+                 <Grid Grid.Row="2" VerticalOptions="CenterAndExpand" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Frame Grid.Column="0" Padding="0" HasShadow="false" BackgroundColor="#9D47DB" CornerRadius="15" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start"/>
+                        <BoxView Grid.Column="1" HeightRequest="1" VerticalOptions="Center" BackgroundColor="#D1D1D1"/>
+                        <Frame Grid.Column="2" Padding="0" HasShadow="false" BackgroundColor="#9D47DB" CornerRadius="15" HeightRequest="30" WidthRequest="30" HorizontalOptions="End"/>
+                    </Grid>
+                <Label Grid.Row="3" Margin="0,0,0,80" Text="{Binding BookingInfo}" TextColor="#D1B2E8" FontSize="14" HorizontalTextAlignment="Center"/>
+                </Grid>
+                </ScrollView>
+            <Frame BackgroundColor="#32BEA6" Padding="12" VerticalOptions="EndAndExpand" CornerRadius="0" HasShadow="false">
+                        <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="CenterAndExpand">
+                    <Image Source="icon.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="ACCEPT PASS" TextColor="White" FontSize="18" VerticalTextAlignment="Center"/>
+                </StackLayout>
+                    </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

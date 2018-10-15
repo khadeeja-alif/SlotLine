@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.GroundList"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <Frame Padding="0" Margin="10" CornerRadius="10" VerticalOptions="Start">
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="{Binding GroundPic}" HeightRequest="150" Aspect="AspectFill"/>
+                <Grid Grid.Row="1" Margin="15,10" RowSpacing="5">
+                     <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="1" Text="{Binding GroundName}" LineBreakMode="TailTruncation" TextColor="#323232">
+            <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="16"/>
+                </Label.FontSize>   
+            </Label>
+                <Label Grid.Row="2" Text="{Binding GroundPlace}" LineBreakMode="TailTruncation" TextColor="#707070">
+            <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="14"/>
+                </Label.FontSize>   
+            </Label>
+                             <!-- HORIZONTAL LISTVIEW TEMPLATE -->
+                        <StackLayout Grid.Row="3" Margin="0,10,0,0" HorizontalOptions="Start">
+                            <Image Source="{Binding GamePic}" HeightRequest="35" WidthRequest="35"/>
+                            <Label Text="{Binding GameName}" TextColor="#8D8D8D">
+                                 <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize>   
+            </Label>
+                    </StackLayout>
+                    </Grid>
+            </Grid>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

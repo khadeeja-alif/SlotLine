@@ -14,5 +14,5 @@
   </assembly>
   <assembly fullname="Prism.Forms">
     <type fullname="*" />
-  </assembly> 
+  </assembly>
     </linker>

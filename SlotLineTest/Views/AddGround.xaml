@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.AddGround"
+             xmlns:local="clr-namespace:SlotLineTest"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             Title="Ground Details"
+             NavigationPage.HasBackButton="true"
+             NavigationPage.BackButtonTitle="">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TitleStyle" TargetType="Label">
+                <Setter Property="FontSize">
+                    <Setter.Value>
+                           <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="14"/> 
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="MaterialEntryStyle" TargetType="local:MaterialEntry">
+                <Setter Property="AccentColor" Value="#F0916E"/>
+            </Style>
+            <Style x:Key="ErrorTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="FontSize" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10" Spacing="15">
+                  <StackLayout Orientation="Horizontal">
+                <Label Text="Ground Images" TextColor="#323232" Style="{StaticResource TitleStyle}"/>
+                <Label Text="Manage" HorizontalOptions="EndAndExpand" TextColor="#F0916E" Style="{StaticResource TitleStyle}"/>
+                    </StackLayout>
+                <cards:CarouselView x:Name="groundImages" ItemsSource="{Binding Images}" MoveDistance="0" IsPanSwipeEnabled="true" IsCyclical="false">
+                    <cards:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="0" HasShadow="true" CornerRadius="22" Margin="10,0" IsClippedToBounds="true">
+                                <ffimage:CachedImage HorizontalOptions="FillAndExpand" HeightRequest="200"
+                                                     Source="{Binding .}" Aspect="AspectFill"/>
+                            </Frame>
+                        </DataTemplate>
+                    </cards:CarouselView.ItemTemplate>
+                    </cards:CarouselView>
+<!--                <Image Source="ic_launcher.png" HorizontalOptions="FillAndExpand" HeightRequest="200" Aspect="AspectFill"/>-->
+          <StackLayout>
+                <local:MaterialEntry x:Name="groundName" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="Ground Name"
+                                       Text="{Binding GroundName.Value}">
+                                </local:MaterialEntry>
+                 <Label IsVisible="False" x:Name="groundvalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=GroundName.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                 <Label Text="Sports Available" TextColor="#323232" Style="{StaticResource TitleStyle}"/>
+                      <Label Text="Manage" HorizontalOptions="EndAndExpand" TextColor="#F0916E" Style="{StaticResource TitleStyle}"/>
+                </StackLayout>
+                  <!-- HORIZONTAL LISTVIEW TEMPLATE -->
+                        <StackLayout HorizontalOptions="Start">
+                            <Image Source="ic_launcher.png" HeightRequest="35" WidthRequest="35"/>
+                            <Label Text="Football" TextColor="#8D8D8D">
+                                 <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize>   
+            </Label>
+                        </StackLayout>
+                    
+                 <Label Text="Timings" TextColor="#323232" Margin="0,10,0,0" Style="{StaticResource TitleStyle}"/>
+               <Entry />
+                 <Label Text="GROUND ADDRESS AND CONTACT" Margin="0,10,0,0" TextColor="#F0916E" Style="{StaticResource TitleStyle}"/>
+                 <!-- MAP-->
+                <StackLayout>
+                    <local:MaterialEntry x:Name="location" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="Location"
+                                       Text="{Binding Location.Value}">
+                                </local:MaterialEntry>
+                  <Label IsVisible="False" x:Name="locationvalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=Location.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                </StackLayout>
+            <StackLayout>
+                  <local:MaterialEntry x:Name="businessname" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="Business Name"
+                                       Text="{Binding BusinessName.Value}">
+                                </local:MaterialEntry>
+                  <Label IsVisible="False" x:Name="businessvalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=BusinessName.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+            </StackLayout>
+            <StackLayout>
+                <local:MaterialEntry x:Name="building" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="Apt, Suite, Bulding etc..."
+                                       Text="{Binding Building.Value}">
+                                </local:MaterialEntry>
+                  <Label IsVisible="False" x:Name="buildingvalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=Building.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                </StackLayout>
+            <StackLayout>
+                <local:MaterialEntry x:Name="street" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="Street Address"
+                                       Text="{Binding StreetAddress.Value}">
+                                </local:MaterialEntry>
+                  <Label IsVisible="False" x:Name="streetvalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=StreetAddress.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                </StackLayout>
+            <StackLayout>
+                <local:MaterialEntry x:Name="city" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="City"
+                                       Text="{Binding City.Value}">
+                                </local:MaterialEntry>
+                  <Label IsVisible="False" x:Name="cityvalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=City.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                </StackLayout>
+                <Grid ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0">
+                     <local:MaterialEntry x:Name="state" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="State"
+                                       Text="{Binding State.Value}">
+                                </local:MaterialEntry>
+                     <Label IsVisible="False" x:Name="statevalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=State.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1">
+                     <local:MaterialEntry x:Name="pin" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="Postal Code/PIN"
+                                       Text="{Binding Pin.Value}">
+                                </local:MaterialEntry>
+                     <Label IsVisible="False" x:Name="pinvalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=Pin.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                    </StackLayout>
+                </Grid>
+                <StackLayout>
+                <local:MaterialEntry Grid.Column="0" x:Name="phone" Style="{StaticResource MaterialEntryStyle}"
+                                       Placeholder="Phone Number"
+                                       Text="{Binding Phone.Value}">
+                                </local:MaterialEntry>
+                   <Label IsVisible="False" x:Name="phonevalidation"
+                                       Text="This is mandatory"
+                                       Style="{StaticResource ErrorTextStyle}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Path=Phone.IsValid}"
+                                                     Value="False">
+                                            <Setter Property="IsVisible" Value="True" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                    </StackLayout>
+                 <Label Text="DESCRIPTION" Margin="0,10,0,0" TextColor="#F0916E" Style="{StaticResource TitleStyle}"/>
+                <Frame OutlineColor="#EFEFEF" Padding="0" HasShadow="false" CornerRadius="0">
+                <Editor BackgroundColor="#FAFAFA"/>
+                    </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

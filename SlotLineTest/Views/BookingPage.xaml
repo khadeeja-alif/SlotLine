@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.BookingPage"
+             xmlns:view="clr-namespace:SlotLineTest.Views"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="4.2*"/>
+            </Grid.ColumnDefinitions>
+        <view:SlotLineControl Grid.Column="1" ItemsSource="{Binding Slots}" SlotSelected="{Binding SlotSelected,Mode=TwoWay}"/>
+            </Grid>
+  <!--<Grid>
+       <ListView x:Name="slotList" BackgroundColor="#f5f5f5" ItemsSource="{Binding Slots}" SelectionMode="Single" SelectedItem="{Binding SlotSelected}" SeparatorVisibility="None" HasUnevenRows="true"
+                 RefreshAllowed="true" IsRefreshing="{Binding IsBusy}">
+                <ListView.ItemTemplate>
+                       <DataTemplate>
+                            <ViewCell>
+                            <Grid RowSpacing="0" HeightRequest="60">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="slotTime" Grid.Row="0" Grid.Column="0" Text="{Binding SlotTime}" IsVisible="{Binding NotHalfTime}" TextColor="Black" FontSize="14" HorizontalTextAlignment="Center"/>
+                                <BoxView IsVisible="{Binding NotHalfTime}" Grid.Row="0" Grid.Column="1" 
+                                         HeightRequest="1" WidthRequest="30" 
+                                         VerticalOptions="Start" HorizontalOptions="End" 
+                                         BackgroundColor="Silver"/>
+                                <BoxView IsVisible="false" Grid.Row="0" Grid.Column="1" 
+                                         HeightRequest="1" WidthRequest="10" 
+                                         VerticalOptions="Start" HorizontalOptions="End" 
+                                         BackgroundColor="Silver">
+                                    <BoxView.Triggers>
+                                           <DataTrigger TargetType="BoxView"
+                                         Binding="{Binding Source={x:Reference slotTime}, Path=IsVisible}"
+                                         Value="False">
+                                <Setter Property="IsVisible" Value="True" />
+                            </DataTrigger>
+                                    </BoxView.Triggers>
+                                    </BoxView>
+                                 <Frame IsVisible="{Binding ShowBox}" BackgroundColor="{Binding SlotColor}" Grid.Row="0" Grid.Column="3" Margin="0" HasShadow="false" OutlineColor="#c7c7c7" CornerRadius="0"/>
+                                <Label IsVisible="{Binding ShowBox}" Grid.Row="0" Grid.Column="3" Text="{Binding SlotNo}" TextColor="Black" FontSize="14" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                            </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <StackLayout/>
+                </ListView.Footer>
+            </ListView>
+        </Grid>-->
+    </ContentPage.Content>
+</ContentPage>

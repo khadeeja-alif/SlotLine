@@ -1,0 +1,743 @@
+﻿{
+  "SlotLineControl.xaml": {
+    "Slots": [
+      {
+        "SlotNo": "1",
+        "SlotTime": "5:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "2",
+        "SlotTime": "5:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "3",
+        "SlotTime": "6:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "4",
+        "SlotTime": "6:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "5",
+        "SlotTime": "7:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "6",
+        "SlotTime": "7:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "7",
+        "SlotTime": "8:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "8",
+        "SlotTime": "8:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "9",
+        "SlotTime": "9:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "10",
+        "SlotTime": "9:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "#ACACAC"
+      },
+      {
+        "SlotNo": "11",
+        "SlotTime": "10:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "#ACACAC"
+      },
+      {
+        "SlotNo": "12",
+        "SlotTime": "10:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "#ACACAC"
+      },
+      {
+        "SlotNo": "13",
+        "SlotTime": "11:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "14",
+        "SlotTime": "11:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "15",
+        "SlotTime": "12:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "16",
+        "SlotTime": "12:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "17",
+        "SlotTime": "1:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "18",
+        "SlotTime": "1:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "19",
+        "SlotTime": "2:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "#FFD38D"
+      },
+      {
+        "SlotNo": "20",
+        "SlotTime": "2:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "#FFD38D"
+      },
+      {
+        "SlotNo": "21",
+        "SlotTime": "3:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "#FFD38D"
+      },
+      {
+        "SlotNo": "22",
+        "SlotTime": "3:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "#FFD38D"
+      },
+      {
+        "SlotNo": "23",
+        "SlotTime": "4:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "24",
+        "SlotTime": "4:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "25",
+        "SlotTime": "5:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "26",
+        "SlotTime": "5:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "27",
+        "SlotTime": "6:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "28",
+        "SlotTime": "6:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "29",
+        "SlotTime": "7:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "30",
+        "SlotTime": "7:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "31",
+        "SlotTime": "8:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "32",
+        "SlotTime": "8:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "33",
+        "SlotTime": "9:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "34",
+        "SlotTime": "9:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "#32BEA6"
+      },
+      {
+        "SlotNo": "35",
+        "SlotTime": "10:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "#32BEA6"
+      },
+      {
+        "SlotNo": "36",
+        "SlotTime": "10:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "#32BEA6"
+      },
+      {
+        "SlotNo": "37",
+        "SlotTime": "11:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "38",
+        "SlotTime": "11:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "39",
+        "SlotTime": "12:00 AM",
+        "NotHalfTime": true,
+        "ShowBox": false,
+        "SlotColor": "White"
+      }
+    ]
+  },
+  "BookingPage.xaml": {
+    "Slots": [
+      {
+        "SlotNo": "1",
+        "SlotTime": "5:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "2",
+        "SlotTime": "5:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "3",
+        "SlotTime": "6:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "4",
+        "SlotTime": "6:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "5",
+        "SlotTime": "7:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "6",
+        "SlotTime": "7:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "7",
+        "SlotTime": "8:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "8",
+        "SlotTime": "8:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "9",
+        "SlotTime": "9:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "10",
+        "SlotTime": "9:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "#ACACAC"
+      },
+      {
+        "SlotNo": "11",
+        "SlotTime": "10:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "#ACACAC"
+      },
+      {
+        "SlotNo": "12",
+        "SlotTime": "10:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "#ACACAC"
+      },
+      {
+        "SlotNo": "13",
+        "SlotTime": "11:00 AM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "14",
+        "SlotTime": "11:30 AM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "15",
+        "SlotTime": "12:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "16",
+        "SlotTime": "12:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "17",
+        "SlotTime": "1:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "18",
+        "SlotTime": "1:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "19",
+        "SlotTime": "2:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "#FFD38D"
+      },
+      {
+        "SlotNo": "20",
+        "SlotTime": "2:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "#FFD38D"
+      },
+      {
+        "SlotNo": "21",
+        "SlotTime": "3:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "#FFD38D"
+      },
+      {
+        "SlotNo": "22",
+        "SlotTime": "3:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "#FFD38D"
+      },
+      {
+        "SlotNo": "23",
+        "SlotTime": "4:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "24",
+        "SlotTime": "4:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "25",
+        "SlotTime": "5:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "26",
+        "SlotTime": "5:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "27",
+        "SlotTime": "6:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "28",
+        "SlotTime": "6:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "29",
+        "SlotTime": "7:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "30",
+        "SlotTime": "7:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "31",
+        "SlotTime": "8:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "32",
+        "SlotTime": "8:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "33",
+        "SlotTime": "9:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "34",
+        "SlotTime": "9:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "#32BEA6"
+      },
+      {
+        "SlotNo": "35",
+        "SlotTime": "10:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "#32BEA6"
+      },
+      {
+        "SlotNo": "36",
+        "SlotTime": "10:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "#32BEA6"
+      },
+      {
+        "SlotNo": "37",
+        "SlotTime": "11:00 PM",
+        "NotHalfTime": true,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "38",
+        "SlotTime": "11:30 PM",
+        "NotHalfTime": false,
+        "SlotColor": "White"
+      },
+      {
+        "SlotNo": "39",
+        "SlotTime": "12:00 AM",
+        "NotHalfTime": true,
+        "ShowBox": false,
+        "SlotColor": "White"
+      }
+    ]
+  },
+  "BookingList.xaml": {
+    "TodayBookings": [
+      {
+        "ProfilePicture": "ic_launcher.png",
+        "FullName": "Benedict Cumberbatch",
+        "GameCourt": "Football, Court One",
+        "FullTime": "10:30 AM - 12:30 AM, 2 Hours",
+        "RefCode": "#SNDJNDF",
+        "Amount": "$ 1500",
+        "PaymentStatus": "Fully Paid",
+        "BookingStatus": "Active"
+      },
+      {
+        "ProfilePicture": "ic_launcher.png",
+        "FullName": "Benedict Cumberbatch",
+        "GameCourt": "Football, Court One",
+        "FullTime": "10:30 AM - 12:30 AM, 2 Hours",
+        "RefCode": "#SNDJNDF",
+        "Amount": "$ 1500",
+        "PaymentStatus": "Fully Paid",
+        "BookingStatus": "Active"
+      },
+      {
+        "ProfilePicture": "ic_launcher.png",
+        "FullName": "Benedict Cumberbatch",
+        "GameCourt": "Football, Court One",
+        "FullTime": "10:30 AM - 12:30 AM, 2 Hours",
+        "RefCode": "#SNDJNDF",
+        "Amount": "$ 1500",
+        "PaymentStatus": "Fully Paid",
+        "BookingStatus": "Active"
+      },
+      {
+        "ProfilePicture": "ic_launcher.png",
+        "FullName": "Benedict Cumberbatch",
+        "GameCourt": "Football, Court One",
+        "FullTime": "10:30 AM - 12:30 AM, 2 Hours",
+        "RefCode": "#SNDJNDF",
+        "Amount": "$ 1500",
+        "PaymentStatus": "Fully Paid",
+        "BookingStatus": "Active"
+      },
+      {
+        "ProfilePicture": "ic_launcher.png",
+        "FullName": "Benedict Cumberbatch",
+        "GameCourt": "Football, Court One",
+        "FullTime": "10:30 AM - 12:30 AM, 2 Hours",
+        "RefCode": "#SNDJNDF",
+        "Amount": "$ 1500",
+        "PaymentStatus": "Fully Paid",
+        "BookingStatus": "Active"
+      }
+    ]
+  },
+  "AddGround.xaml": {
+    "Images": [
+      {
+        "Image": "pic1.jpg"
+      },
+      {
+        "Image": "pic2.jpg"
+      },
+      {
+        "Image": "pic3.jpg"
+      }
+    ]
+  },
+  "SportList.xaml": {
+    "GameList": [
+      {
+        "GamePic": "icon.png",
+        "GameName": "Football",
+        "GameHours": "Accepting booking for 30min, 1hr, 1.5hr"
+      },
+      {
+        "GamePic": "icon.png",
+        "GameName": "Basketball",
+        "GameHours": "Accepting booking for 30min, 1hr, 1.5hr"
+      },
+      {
+        "GamePic": "icon.png",
+        "GameName": "Soccer",
+        "GameHours": "Choose accepted booking durations"
+      },
+      {
+        "GamePic": "icon.png",
+        "GameName": "Cricket",
+        "GameHours": "Choose accepted booking durations"
+      },
+      {
+        "GamePic": "icon.png",
+        "GameName": "Swimming",
+        "GameHours": "Accepting booking for 30min, 1hr, 1.5hr"
+      },
+      {
+        "GamePic": "icon.png",
+        "GameName": "Yoga",
+        "GameHours": "Choose accepted booking durations"
+      },
+      {
+        "GamePic": "icon.png",
+        "GameName": "Gym",
+        "GameHours": "Accepting booking for 30min, 1hr, 1.5hr"
+      },
+      {
+        "GamePic": "icon.png",
+        "GameName": "Hockey",
+        "GameHours": "Choose accepted booking durations"
+      }
+    ]
+  },
+  "CourtListing.xaml": {
+    "CourtList": [
+      {
+        "CourtName": "Club Decathlon - Court A",
+        "CourtType": "Independent Court",
+          "GamePic": "icon.png",
+            "GameName": "Football"
+      },
+      {
+        "CourtName": "Club Decathlon - Court A",
+        "CourtType": "Independent Court",
+        "GamePic": "icon.png",
+        "GameName": "Football"
+      },
+      {
+        "CourtName": "Club Decathlon - Court A",
+        "CourtType": "Independent Court",
+        "GamePic": "icon.png",
+        "GameName": "Football"
+      },
+      {
+        "CourtName": "Club Decathlon - Court A",
+        "CourtType": "Independent Court",
+        "GamePic": "icon.png",
+        "GameName": "Football"
+      },
+      {
+        "CourtName": "Club Decathlon - Court A",
+        "CourtType": "Independent Court",
+        "GamePic": "icon.png",
+        "GameName": "Football"
+      }
+    ]
+  },
+  "CourtDetails.xaml": {
+    "CombinedCourts": [
+      {
+        "CourtName": "Club Decathlon - Court A"
+      },
+      {
+        "CourtName": "Club Decathlon - Court C"
+      }
+    ]
+  },
+  "CartView.xaml": {
+    "CartList": [
+      {
+        "Date": "12-10-18",
+        "SlotDate": "Mon, 12 Dec 2018",
+        "GroundName": "Decathlon Court A",
+        "SlotTime": "5:30 AM to 7:30 AM - 2 hr",
+        "Amount" : "$ 2,500.00"
+      },
+      {
+        "Date": "13-10-18",
+        "SlotDate": "Tue, 13 Dec 2018",
+        "GroundName": "Decathlon Court A",
+        "SlotTime": "8:30 AM to 10:30 AM - 2 hr",
+        "Amount": "$ 2,500.00"
+      },
+      {
+        "Date": "13-10-18",
+        "SlotDate": "Thu, 15 Dec 2018",
+        "GroundName": "Decathlon Court A",
+        "SlotTime": "6:30 AM to 8:30 AM - 2 hr",
+        "Amount": "$ 2,500.00"
+      },
+      {
+        "Date": "14-10-18",
+        "SlotDate": "Wed, 14 Dec 2018",
+        "GroundName": "Decathlon Court A",
+        "SlotTime": "10:30 AM to 12:30 AM - 2 hr",
+        "Amount": "$ 2,500.00"
+      }
+    ]
+  },
+  "ListBlockedSlots.xaml": {
+    "BlockedSlotList": [
+      {
+        "Date": "24 Dec 2018 - Monday",
+        "CourtName": "Synthetic Court - 1",
+        "BlockedByOn": "By Chris Hemsworth - 20 Dec 2018",
+        "BlockedHours": "2.5 hours",
+        "SlotNo": "2 Slots"
+      },
+      {
+        "Date": "24 Dec 2018 - Monday",
+        "CourtName": "Synthetic Court - 1",
+        "BlockedByOn": "By Chris Hemsworth - 20 Dec 2018",
+        "BlockedHours": "2.5 hours",
+        "SlotNo": "2 Slots"
+      },
+      {
+        "Date": "25 Dec 2018 - Tuesday",
+        "CourtName": "Synthetic Court - 1",
+        "BlockedByOn": "By Chris Hemsworth - 20 Dec 2018",
+        "BlockedHours": "2.5 hours",
+        "SlotNo": "2 Slots"
+      },
+      {
+        "Date": "24 Dec 2018 - Tuesday",
+        "CourtName": "Synthetic Court - 1",
+        "BlockedByOn": "By Chris Hemsworth - 20 Dec 2018",
+        "BlockedHours": "2.5 hours",
+        "SlotNo": "2 Slots"
+      }
+    ]
+  },
+  "BlockStartView.xaml": {
+    "GroundList": [
+      {
+        "GroundName": "Club Decathlon",
+        "Location": "KT Gopalan Rd, Eranipalam"
+      },
+      {
+        "GroundName": "Club Decathlon",
+        "Location": "KT Gopalan Rd, Eranipalam"
+      },
+      {
+        "GroundName": "Club Decathlon",
+        "Location": "KT Gopalan Rd, Eranipalam"
+      },
+      {
+        "GroundName": "Club Decathlon",
+        "Location": "KT Gopalan Rd, Eranipalam"
+      },
+      {
+        "GroundName": "Club Decathlon",
+        "Location": "KT Gopalan Rd, Eranipalam"
+      }
+    ]
+  },
+  "BlockCompleteView.xaml": {
+    "GroundList": [
+      {
+        "Slot": "5:30 AM - 7:00 AM",
+        "SlotHours": "1.5 Hours"
+      },
+      {
+        "Slot": "5:30 AM - 7:00 AM",
+        "SlotHours": "1.5 Hours"
+      },
+      {
+        "Slot": "5:30 AM - 7:00 AM",
+        "SlotHours": "1.5 Hours"
+      },
+      {
+        "Slot": "5:30 AM - 7:00 AM",
+        "SlotHours": "1.5 Hours"
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SlotLineTest.Views.BookingList"
+             NavigationPage.HasNavigationBar="false"
+             xmlns:local="clr-namespace:SlotLineTest.Views">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <local:HomeLocationBar/>
+        <ListView Grid.Row="1" x:Name="bookingList" ItemsSource="{Binding TodayBookings}" HasUnevenRows="true" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+        <Grid VerticalOptions="Start" Margin="0,10" Padding="10" RowSpacing="5" ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Frame Grid.Column="0" Grid.RowSpan="3" HasShadow="false" Padding="0" CornerRadius="10" IsClippedToBounds="true" Margin="0,0,10,0">
+            <Image Source="{Binding ProfilePicture}" HeightRequest="80" WidthRequest="80" Aspect="AspectFill"/>
+                </Frame>
+            <Label Grid.Column="1" Grid.Row="0" Text="{Binding FullName}" LineBreakMode="TailTruncation" TextColor="#323232">
+            <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="14"/>
+                </Label.FontSize>   
+            </Label>
+            <Label Grid.Column="1" Grid.Row="1" Text="{Binding GameCourt}" LineBreakMode="TailTruncation" TextColor="#323232">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize> 
+                </Label>
+            <Label Grid.Column="1" Grid.Row="2" Text="{Binding FullTime}" LineBreakMode="TailTruncation" TextColor="#9b9b9b">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize> 
+                </Label>
+            <BoxView Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" BackgroundColor="Silver"/>
+            <Label Text="{Binding RefCode}" Grid.Column="1" Grid.Row="4" TextColor="#8e8e8e" LineBreakMode="TailTruncation">
+                 <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize> 
+                </Label>
+            <Label Text="{Binding Amount}" Grid.Column="2" Grid.Row="0" HorizontalTextAlignment="End" TextColor="#5E35B1" FontAttributes="Bold">
+                 <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="16"/>
+                </Label.FontSize> 
+                </Label>
+            <Label Text="{Binding PaymentStatus}" Grid.Column="2" Grid.Row="1" HorizontalTextAlignment="End" TextColor="#32BEA6">
+                 <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize> 
+                </Label>
+            <Label Text="{Binding BookingStatus}" Grid.Column="2" Grid.Row="4" HorizontalTextAlignment="End" TextColor="#32BEA6">
+                 <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12"/>
+                </Label.FontSize> 
+                </Label>
+        </Grid>
+                        </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout/>
+            </ListView.Footer>
+            </ListView>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>

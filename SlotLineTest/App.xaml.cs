@@ -27,13 +27,18 @@ namespace SlotLineTest
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("NavigationPage/AddGround");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<BookingPage,BookingPageViewModel>();
+            containerRegistry.RegisterForNavigation<AddGround>();
+            containerRegistry.RegisterForNavigation<BookingList>();
+            containerRegistry.RegisterForNavigation<GroundList>();
+            containerRegistry.RegisterForNavigation<HomePage>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
